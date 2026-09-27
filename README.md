@@ -91,7 +91,7 @@ Page 03 participants, challenges, duration, eligibility, and prize pool remain *
 
 ## Team workflow
 
-Ask the repository owner for collaborator access using your GitHub username, then accept the invitation. Use branches and pull requests to collaborate.
+ Use branches and pull requests to collaborate.
 
 ```sh
 # Until the current work is merged into main
