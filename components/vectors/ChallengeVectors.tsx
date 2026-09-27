@@ -47,7 +47,9 @@ function VectorNavigation() {
         >
           <span>02</span>CTF
         </a>
-        {["INFO", "FAQ"].map((t, i) => (
+        {["INFO", "FAQ"].map((t, i) => i === 0 ? (
+          <a className="vectors-nav-item" href="/#event-highlights" key={t}><span>03</span>INFO</a>
+        ) : (
           <button
             className="vectors-nav-item"
             aria-disabled="true"
@@ -74,6 +76,8 @@ export default function ChallengeVectors() {
   useVectorMotion(root);
   return (
     <div className="vectors-journey" ref={root} id="challenge-vectors">
+      {/* Motion-only wrapper: lets the journey hold the scene while it recedes. */}
+      <div className="vectors-pin">
       <section className="vectors-screen" aria-labelledby="vectors-title">
         <div className="vectors-environment" aria-hidden="true" />
         <VectorNavigation />
@@ -218,6 +222,7 @@ export default function ChallengeVectors() {
           <span>DIGITAL DEFENCE CLUB × CBIT</span>
         </footer>
       </section>
+      </div>
     </div>
   );
 }
